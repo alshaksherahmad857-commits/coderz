@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #F4F7F8;
+    color: #12546C;
+    font-family: Tahoma, Arial, sans-serif;
+    direction: rtl;
+}
+
+.workshop-card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 425px;
+    max-width: calc(100% - 32px);
+    padding: 14px 16px 19px;
+
+    border: 2px solid #12546C;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 18px rgba(18, 84, 108, 0.15);
+
+    text-align: right;
+}
+
+.booking-badge {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 11px;
+    background-color: #E5F7E8;
+    color: #237A36;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 9px 0 9px;
+    color: #12546C;
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+.description {
+    margin: 0 0 20px;
+    color: #5F6F78;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.buttons {
+    margin: 0 0 14px;
+    font-size: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 9px 17px;
+    border: 2px solid #12546C;
+    border-radius: 6px;
+
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: bold;
+    font-family: inherit;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.button-primary {
+    margin-left: 10px;
+    background-color: #12546C;
+    color: #FFFFFF;
+}
+
+.button-secondary {
+    background-color: #FFFFFF;
+    color: #12546C;
+}
+
+.button:hover,
+.button:focus-visible {
+    opacity: 0.85;
+}
+
+.note {
+    margin: 0;
+    color: #5F6F78;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+@media (max-width: 350px) {
+    .workshop-card {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .button {
+        padding-right: 11px;
+        padding-left: 11px;
+    }
+}
