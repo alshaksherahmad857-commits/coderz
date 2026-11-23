@@ -1,0 +1,133 @@
+:root {
+    --page-bg: #F5F3FF;
+    --card-bg: #FFFFFF;
+    --purple: #6D28D9;
+    --dark: #1F2937;
+    --muted: #6B7280;
+    --badge-bg: #EDE9FE;
+    --border: #DDD6FE;
+    --card-shadow: rgba(109, 40, 217, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    direction: rtl;
+    font-family: Tahoma, Arial, sans-serif;
+    background-color: var(--page-bg);
+    color: var(--dark);
+}
+
+.page {
+    display: table;
+    width: 100%;
+    min-height: 100vh;
+    table-layout: fixed;
+}
+
+.page-center {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 32px 16px;
+}
+
+.course-card {
+    width: 376px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 27px 17px;
+    text-align: center;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: 0 10px 24px var(--card-shadow);
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 24px;
+    border-radius: 999px;
+    background-color: var(--badge-bg);
+    color: var(--purple);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+h1 {
+    margin: 14px 0 6px;
+    color: var(--dark);
+    font-size: 29px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.price {
+    margin: 0;
+    color: var(--purple);
+    font-size: 47px;
+    line-height: 1.35;
+    font-weight: 700;
+}
+
+.price-caption {
+    margin: 0;
+    color: var(--muted);
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.divider {
+    height: 0;
+    margin: 18px 0 10px;
+    border: 0;
+    border-top: 1px solid var(--border);
+}
+
+.course-details {
+    padding: 0;
+    margin: 0 0 17px;
+    list-style: none;
+}
+
+.course-details li {
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.95;
+}
+
+.book-button {
+    display: block;
+    width: 100%;
+    min-height: 45px;
+    padding: 8px 12px;
+    border: 0;
+    border-radius: 8px;
+    background-color: var(--purple);
+    color: var(--card-bg);
+    font: 700 20px/1.4 Tahoma, Arial, sans-serif;
+    cursor: pointer;
+}
+
+.book-button:hover,
+.book-button:focus-visible {
+    filter: brightness(0.92);
+}
+
+@media (max-width: 380px) {
+    .course-card {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .price {
+        font-size: 43px;
+    }
+}
