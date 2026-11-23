@@ -1,0 +1,147 @@
+:root {
+    --page-background: #F1F5F9;
+    --card-background: #FFFFFF;
+    --heading: #0F172A;
+    --muted: #64748B;
+    --border: #CBD5E1;
+    --blue: #0369A1;
+    --blue-badge: #E0F2FE;
+    --green: #15803D;
+    --green-badge: #DCFCE7;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    background: var(--page-background);
+    color: var(--heading);
+    direction: rtl;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.schedule-page {
+    width: 432px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.page-header h1 {
+    margin: 0 0 7px;
+    font-size: 36px;
+    line-height: 1.4;
+    color: var(--heading);
+}
+
+.page-header p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--muted);
+}
+
+.meeting-card {
+    width: 100%;
+    min-height: 200px;
+    margin: 0 0 18px;
+    padding: 14px 14px 15px;
+    border: 1px solid var(--border);
+    border-right-width: 4px;
+    border-radius: 11px;
+    background: var(--card-background);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+    text-align: right;
+}
+
+.meeting-card--blue {
+    border-right-color: var(--blue);
+}
+
+.meeting-card--green {
+    border-right-color: var(--green);
+}
+
+.meeting-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.meeting-card--blue .meeting-badge {
+    background: var(--blue-badge);
+    color: var(--blue);
+}
+
+.meeting-card--green .meeting-badge {
+    background: var(--green-badge);
+    color: var(--green);
+}
+
+.meeting-card h2 {
+    margin: 9px 0 3px;
+    color: var(--heading);
+    font-size: 24px;
+    line-height: 1.45;
+}
+
+.meeting-description,
+.meeting-time {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+.meeting-description {
+    margin: 0 0 4px;
+}
+
+.meeting-time {
+    margin: 0 0 10px;
+}
+
+.meeting-button {
+    display: inline-block;
+    padding: 7px 21px;
+    border: 0;
+    border-radius: 5px;
+    background: var(--blue);
+    color: #FFFFFF;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.meeting-card--green .meeting-button {
+    background: var(--green);
+}
+
+.meeting-button:hover {
+    filter: brightness(0.92);
+}
+
+@media (max-width: 380px) {
+    .schedule-page {
+        padding-right: 12px;
+        padding-left: 12px;
+    }
+
+    .page-header h1 {
+        font-size: 30px;
+    }
+
+    .meeting-card h2 {
+        font-size: 21px;
+    }
+}
